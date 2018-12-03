@@ -9,5 +9,18 @@ public class FaceDrawing
         this.fFeatures = fFeatures;
     }
 
-    
+    void edit(String replace, int row, int column)
+    {
+
+    }
+
+    void fill (String str)
+    {
+
+    }
+
+    String toString()
+    {
+        
+    }
 }
