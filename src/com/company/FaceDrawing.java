@@ -4,19 +4,20 @@ public class FaceDrawing
 {
     private String [][] fFeatures;
 
-    public faceDrawing(fFeatures)
+    public FaceDrawing(String [][] fFeatures)
     {
         this.fFeatures = fFeatures;
     }
 
-    void edit(String replace, int row, int column)
+    //Edits one of the strings in the fFeatures array
+    public void edit(String replace, int row, int column)
     {
         fFeatures[row][column] = replace;
     }
 
-    void fill (String str)
+    //Fills the fFeatures array with a single string
+    public void fill (String str)
     {
-        str = " ";
         for(int i = 0; i < fFeatures.length; i++)
         {
             for(int n = 0; i < fFeatures[i].length; n++)
@@ -26,14 +27,19 @@ public class FaceDrawing
         }
     }
 
-    String toString()
+    //Returns a String representing the face concatenated together row by row
+    //with new line characters between each row
+    public String toStringz()
     {
+        String str = ".";
         for(int i = 0; i < fFeatures.length; i++)
         {
             for(int n = 0; i < fFeatures[i].length; n++)
             {
-                System.out.print(fFeatures[i][n]);
+                str+= fFeatures[i][n];
             }
+            str+='\n';
         }
+        return str;
     }
 }
