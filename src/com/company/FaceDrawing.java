@@ -16,30 +16,33 @@ public class FaceDrawing
     }
 
     //Fills the fFeatures array with a single string
-    public void fill (String str)
+    public void fill(String str)
     {
-        for(int i = 0; i < fFeatures.length; i++)
+        for (int i=0;i < fFeatures.length; i++)
         {
-            for(int n = 0; i < fFeatures[i].length; n++)
+            for (int j=0; j < fFeatures[i].length; j++)
             {
-                fFeatures[i][n] = str;
+                fFeatures[i][j] = str;
             }
         }
     }
 
+
     //Returns a String representing the face concatenated together row by row
     //with new line characters between each row
-    public String toStringz()
+    public String toString()
     {
-        String str = ".";
-        for(int i = 0; i < fFeatures.length; i++)
+        String output = "";
+        for (int i=0; i < fFeatures.length; i++)
         {
-            for(int n = 0; i < fFeatures[i].length; n++)
+            for (int j=0; j < fFeatures[i].length; j++)
             {
-                str+= fFeatures[i][n];
+                output += fFeatures[i][j];
             }
-            str+='\n';
+            output+= "\n";
         }
-        return str;
+        return output;
     }
 }
+
+
